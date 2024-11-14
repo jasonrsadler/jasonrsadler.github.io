@@ -1,0 +1,11 @@
+/* line 1, app/assets/stylesheets/usersite_print.scss */
+#main-nav {
+  display: none;
+}
+
+/* line 5, app/assets/stylesheets/usersite_print.scss */
+html,
+body {
+  background-color: #fff;
+  color: #000;
+}
