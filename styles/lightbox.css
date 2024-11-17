@@ -418,7 +418,10 @@
 
 @font-face {
   font-family: 'font-icons';
-  src: url(/assets/font-icons-a6911cced953802e6c274e1cd1c6f0a27236e714a9cd5e4ce997b35693a8aad1.eot?#iefix) format("eot"), url(/assets/font-icons-1d02b5c1e9cc30d15b047237f2519e5b8cf052c1a42dffdb4eb813d63c789538.svg#font-icons) format("svg"), url(/assets/font-icons-50892f71d62f1e92fa3c4dfc6e00e1b097fa3a3d4eda394bf5dee51b3d92df7b.woff) format("woff"), url(/assets/font-icons-c1b19c2a5850eefd52c71f3bf9b3699d958609102ed0c8c95349bb6b3a889403.ttf) format("truetype");
+  src: url(./font-icons.woff) format("eot"), 
+  url(/assets/font-icons.svg#font-icons) format("svg"), 
+  url(/assets/font-icons-2.woff) format("woff"), 
+  url(/assets/font-icons-c1b19c2a5850eefd52c71f3bf9b3699d958609102ed0c8c95349bb6b3a889403.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
