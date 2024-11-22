@@ -1,0 +1,2 @@
+/**! @license Third-party licenses available at bandzoogle.com/licenses */
+var s=()=>document.body.classList.contains("fieri"),r=t=>{t.forEach((t=>{if(t.parentNode.classList.contains("video-container")||t.classList.contains("skip-wrapper"))return;let e=document.createElement("div");e.classList.add("video-container");let i=t.getAttribute("width");i&&e.style.setProperty("--video-width",`${i}px`),t.replaceWith(e),e.appendChild(t)}))};export{s as a,r as b};

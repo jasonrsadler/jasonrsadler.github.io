@@ -1,0 +1,2 @@
+/**! @license Third-party licenses available at bandzoogle.com/licenses */
+!window.Turbo&&!window.TurboImportRequested&&(window.TurboImportRequested=!0,import("/scripts/chunks/turbo.es2017-esm-5RWPCV63.digested.js").then((()=>{Turbo.start(),window.Turbo=Turbo})));

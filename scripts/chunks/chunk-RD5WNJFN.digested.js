@@ -1,0 +1,2 @@
+/**! @license Third-party licenses available at bandzoogle.com/licenses */
+import{a as i}from"/scripts/chunks/chunk-YX7F2HNK.digested.js";var p=()=>{if(!window.stimulusApplication){let s=i.start();window.stimulusApplication=s}return window.stimulusApplication};export{p as a};

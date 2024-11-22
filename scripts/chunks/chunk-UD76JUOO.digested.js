@@ -1,0 +1,7 @@
+/**! @license Third-party licenses available at bandzoogle.com/licenses */
+function d(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)e[n]=r[n]}return e}function s(e,t){function r(r,n,o){if(!(typeof document>"u")){"number"==typeof(o=d({},t,o)).expires&&(o.expires=new Date(Date.now()+864e5*o.expires)),o.expires&&(o.expires=o.expires.toUTCString()),r=encodeURIComponent(r).replace(/%(2[346B]|5E|60|7C)/g,decodeURIComponent).replace(/[()]/g,escape);var i="";for(var c in o)o[c]&&(i+="; "+c,!0!==o[c]&&(i+="="+o[c].split(";")[0]));return document.cookie=r+"="+e.write(n,r)+i}}function n(t){if(!(typeof document>"u"||arguments.length&&!t)){for(var r=document.cookie?document.cookie.split("; "):[],n={},o=0;o<r.length;o++){var i=r[o].split("="),c=i.slice(1).join("=");try{var u=decodeURIComponent(i[0]);if(n[u]=e.read(c,u),t===u)break}catch{}}return t?n[t]:n}}return Object.create({set:r,get:n,remove:function(e,t){r(e,"",d({},t,{expires:-1}))},withAttributes:function(e){return s(this.converter,d({},this.attributes,e))},withConverter:function(e){return s(d({},this.converter,e),this.attributes)}},{attributes:{value:Object.freeze(t)},converter:{value:Object.freeze(e)}})}var g={read:function(e){return'"'===e[0]&&(e=e.slice(1,-1)),e.replace(/(%[\dA-F]{2})+/gi,decodeURIComponent)},write:function(e){return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,decodeURIComponent)}},C=s(g,{path:"/"});export{C as a};
+/*! Bundled license information:
+
+js-cookie/dist/js.cookie.mjs:
+  (*! js-cookie v3.0.5 | MIT *)
+*/
