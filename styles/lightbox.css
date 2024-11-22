@@ -244,14 +244,14 @@
 }
 
 /* For the details, see: http://flowplayer.org/tools/dateinput/index.html#skinning */
-/* the input field 
+/* the input field
 .date {
   border:1px solid #ccc;
   font-size:18px;
   padding:4px;
   text-align:center;
   width:194px;
-  
+
   -moz-box-shadow:0 0 10px #eee inset;
   -webkit-box-shadow:0 0 10px #eee inset;
 }
@@ -418,9 +418,9 @@
 
 @font-face {
   font-family: 'font-icons';
-  src: url(./font-icons.woff) format("eot"), 
-  url(./font-icons.svg#font-icons) format("svg"), 
-  url(./font-icons-2.woff) format("woff"), 
+  src: url(./font-icons.woff) format("eot"),
+  url(./font-icons.svg#font-icons) format("svg"),
+  url(./font-icons-2.woff) format("woff"),
   url(/assets/font-icons-c1b19c2a5850eefd52c71f3bf9b3699d958609102ed0c8c95349bb6b3a889403.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -7842,6 +7842,12 @@ body:not(.mobile-view) #usersite-container .default-page-header-area {
 #usersite-container .zoogle-music-player .track-number-play .track-number {
   display: block;
   width: 31px;
+}
+
+#usersite-container .zoogle-music-player .track-number-play .track-number2 {
+  display: block;
+  width: 31px;
+  color:hsla(var(--text-color-hsl),.4);
 }
 
 /* line 463, app/assets/stylesheets/usersite/global/features/_music_features.scss */
