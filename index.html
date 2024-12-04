@@ -386,6 +386,36 @@
       --section-background-color-l: 100;
       --section-background-color-a: 1.0;
     }
+
+    .floating-gfm-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px; /* Adjust width as needed */
+            height: 25vh;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+    .floating-gfm-widget iframe {
+      height: 232.391px;
+    }
+
+    #video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   </style>
   <link rel="stylesheet" href="styles/usersite_print.css" media="print">
 
@@ -570,6 +600,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 
   </li>
         </ul>
+
 </nav>
 
 
@@ -632,7 +663,11 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 </a>
 
 </li>
-</ul></section></div>
+</ul></section>
+<div class="floating-gfm-widget">
+<div class="gfm-embed" data-url="https://www.gofundme.com/f/support-jason-sadlers-debut-album-journey/widget/medium?sharesheet=manage coaching tasks card&attribution_id=sl:7b1a8706-e76c-459d-a781-67e45ca3986f"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+</div>
+</div>
 </div>
 </div>
 </moda-section></moda-sections></div>
@@ -642,26 +677,42 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 			<div id="page-media">
 				<div class="page-media-wrap">
 					<div id="page_media_container" class="page-media-wrapper">
-      <media-background-container class="moda m-page-media m-media m-bordered m-cut-corner m-clipped m-shape m-masked page-photos page-media-container" interval="medium" speed="medium" transition="fade" style="--media-background-color: #000000" active-index="0"><template shadowrootmode="open"><!----><slot></slot></template>
-  <media-background crop-rect="{&quot;x&quot;:637.2709700858323,&quot;y&quot;:638.3780778109303,&quot;w&quot;:1489.53488372093,&quot;h&quot;:968.6046511627906}" focal-point="{&quot;x&quot;:850.7290299141677,&quot;y&quot;:353.62192218906983}" original-width="2976" original-height="1984" mode="cropped" class="page-photo -is-active" image-align="center" image-justify="center" vignette="none" background-style="color" opacity="100" fit="horizontal" style="--media-background-opacity: 100%; --image-url: url(https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/1037748/d3518bf0ffd476d5864eeb2cdd80e8caff35ac7b/original/img-9128.jpg/!!/b%3AW1sicmVzaXplIiwxODAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg);"><template shadowrootmode="open"><!---->
+      <media-background-container class="moda m-page-media m-media m-bordered m-cut-corner m-clipped m-shape m-masked page-photos page-media-container" interval="medium" speed="medium" transition="fade" style="--media-background-color: #000000" active-index="0">
+        <template shadowrootmode="open">
+          <slot></slot>
+        </template>
+  <media-background
+    crop-rect="{&quot;x&quot;:637.2709700858323,&quot;y&quot;:638.3780778109303,&quot;w&quot;:1489.53488372093,&quot;h&quot;:968.6046511627906}"
+    focal-point="{&quot;x&quot;:850.7290299141677,&quot;y&quot;:353.62192218906983}"
+    original-width="2976"
+    original-height="1984"
+    mode="cropped"
+    class="page-photo -is-active"
+    image-align="center"
+    image-justify="center"
+    vignette="none"
+    background-style="color"
+    opacity="100"
+    fit="horizontal"
+    style="--media-background-opacity: 100%;">
+    <template shadowrootmode="open">
       <media-background-content style="--width: 2747.1662763466043px; --height: auto; --y: 589.2912388847972; --x: 588.26926005191;">
         <slot></slot>
       </media-background-content>
-      <!--?lit$769708434$-->
     </template>
-  <picture>
-      <source media="(max-width: 600px)" srcset="./images/Album_Front.jpg">
-      <source media="(min-width: 601px)" srcset="./images/Album_Front.jpg 2x">
-
-    <img src="./images/Album_Front.jpg.jpg"
-      style="
-        position: absolute;
-        top: calc(var(--y, 0)* -1px);
-        left: calc(var(--x, 0)* -1px);
-        width: var(--width, auto);
-        height: var(--height, auto);
-    ">
-  </picture>
+    <video id="video-background" autoplay muted>
+      <source src="video/CloudScene.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+    <script>
+      const video = document.getElementById('video-background');
+      video.addEventListener('ended', function() {
+        setTimeout(() => {
+          video.currentTime = 0;
+          video.play();
+        }, 10000); // 5-second delay
+      });
+      video.play();
+    </script>
 </media-background>
 
 </media-background-container>
@@ -765,9 +816,6 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 
 
       </div>
-    </div>
-    <div>
-      test
     </div>
 
     </div></section>
@@ -1285,7 +1333,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 </div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 layout_third" data-column-id="29593720" id="feature_column_29593720">
 
   <div class="zoogle-feature block layout_full" data-block-id="27186127" id="feature_block_27186127"><section class="feature text_feature" data-feature-id="6925161" data-controller="content-width" data-content-width-name="feature" id="text_feature_6925161" feature-width="&gt;100 &gt;120 &gt;140 &gt;160 &gt;180 &gt;200 &gt;220 &gt;240 &gt;260 &lt;280 &lt;300 &lt;320 &lt;340 &lt;360 &lt;380 &lt;400 &lt;420 &lt;440 &lt;460 &lt;480 &lt;500 &lt;520 &lt;540 &lt;560 &lt;580 &lt;600 &lt;620 &lt;640 &lt;660 &lt;680 &lt;700 &lt;720 &lt;740 &lt;760 &lt;780 &lt;800 &lt;820 &lt;840 &lt;860 &lt;880 &lt;900 &lt;920 &lt;940 &lt;960 &lt;980 &lt;1000 &lt;1020 &lt;1040 &lt;1060 &lt;1080 &lt;1100 &lt;1120 &lt;1140 &lt;1160 &lt;1180 &lt;1200 &lt;1220 &lt;1240 &lt;1260 &lt;1280 &lt;1300 &lt;1320 &lt;1340 &lt;1360 &lt;1380 &lt;1400">
-    
+
   </section>
 </div>
 <div class="zoogle-feature block layout_full" data-block-id="27186128" id="feature_block_27186128">
