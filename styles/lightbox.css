@@ -1871,6 +1871,7 @@ body {
 
 /* line 94, app/assets/stylesheets/usersite/global/_nav.scss */
 #usersite-container nav#main-nav.non-mobile ul li ul.open-upwards {
+  bottom: 100px;
   top: auto;
   bottom: 100%;
   z-index: 201;
